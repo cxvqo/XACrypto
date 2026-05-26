@@ -1,4 +1,4 @@
-A multi-purpose Cryptography library in Java. Working on it day by day, slowly. Someday this will become used, today is not that day.
+A multi-purpose Cryptography library in Java. Working on it day by day, slowly. Someday this will be complete, today is not that day.
 
 
 Use `setopt interactivecomments` (zsh only) to allow using `#` for comments if you see errors like `zsh: command not found: #`
