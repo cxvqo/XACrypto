@@ -13,7 +13,7 @@ To compile on MacOS 26 (may work on other OS, idk):
 4. jar cfe XACrypto.jar de.caydenno1.xacrypto.XACrypto -C out . # package the .class files into a .jar
 5. (optional)- jar tf XACrypto.jar # view the contents of the jarfile
 
-To compile on Windows 10:
+To compile on Windows 10 (requires java+javac to already be installed):
 
 1. git clone https://github.com/Geprivilegieerde-Anonimiteit-BV/XACrypto.git && REM download the git repository
 2. mkdir out && REM create output directory
