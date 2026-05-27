@@ -1,5 +1,6 @@
 A multi-purpose Cryptography library in Java. Working on it day by day, slowly. Someday this will be complete, today is not that day.
 
+### Current objective: Hashing (SHA-0)
 
 Use `setopt interactivecomments` (zsh only) to allow using `#` for comments if you see errors like `zsh: command not found: #`
 
