@@ -8,12 +8,12 @@ import java.util.concurrent.RecursiveTask;
 
 import static de.caydenno1.xacrypto.hash.sha256.Hex.hash;
 import static de.caydenno1.xacrypto.hash.sha256.Hex.doubleHash;
+import static de.caydenno1.xacrypto.hash.ROT.ROTR;
+
 public final class SHA256 {
     private SHA256(){}
 
-    private static int ROTR(int x, int n){
-        return (x >>> n) | (x << (32 - n));
-    }
+
     public static void compress(int[] h, byte[] b, int offline){
         int[] w = new int [64];
 
@@ -92,9 +92,7 @@ public final class SHA256 {
         if (a == null || b == null) return a == b;
         if (a.length != b.length) return false;
         int diff = 0;
-        for (int i = 0; i < a.length; i++) {
-            diff |= (a[i] ^ b[i]);
-        }
+        for (int i = 0; i < a.length; i++) diff |= (a[i] ^ b[i]);
         return diff == 0;
     }
 
@@ -181,14 +179,12 @@ public final class SHA256 {
     }
 
     static void xor(byte[] dest, byte[] src) {
-        for(int i=0;i<dest.length;i++)dest[i]^=src[i];
+        for (int i = 0 ; i < dest.length ; i++) dest[i]^=src[i];
     }
 
     public static byte[] ByteFromHex(String hex) {
         byte[] out = new byte[hex.length() / 2];
-        for (int i=0;i<out.length;i++) {
-            out[i] = (byte)((Character.digit(hex.charAt(i * 2),16) << 4)|Character.digit(hex.charAt(i * 2 + 1), 16));
-        }
+        for (int i = 0 ; i < out.length ; i++) out[i] = (byte)((Character.digit(hex.charAt(i * 2),16) << 4)|Character.digit(hex.charAt(i * 2 + 1), 16));
         return out;
     }
 }

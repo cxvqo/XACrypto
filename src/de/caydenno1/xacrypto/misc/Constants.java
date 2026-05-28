@@ -1,6 +1,15 @@
 package de.caydenno1.xacrypto.misc;
 
 public class Constants {
+    public static final int[] SHA1_K = {
+            0x5a827999, 0x6ed9eba1, 0x8f1bbcdc, 0xca62c1d6
+    };
+    public static final int[] SHA0_K = {
+            0x00000000,
+            0x5a827999,
+            0x6ed9eba1,
+            0x8f1bbcdc
+    };
     public static final int[] SHA256_K = {
             0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,
             0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,
@@ -20,6 +29,10 @@ public class Constants {
     public static final int[] SHA256_H = {
             0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,
             0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19
+    };
+
+    public static final int[] SHA0_H = {
+            0x67452301,0xEFCDAB89,0x98BADCFE,0x10325476,0xC3D2E1F0
     };
 
     // (no longer a placeholder)
